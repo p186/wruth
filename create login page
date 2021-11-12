@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        
+<style>
+.fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 20px;
+    padding-inline-end: 99px;
+     padding-block-end: 45px;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-radius: 30px !important;
+    width: 80%;
+    border-color: black;
+}
+
+.legend,legend{
+    padding: 0px;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+    text-align: left;
+    margin-left: 50px;
+    max-width:25%
+
+}
+
+input{
+    border-radius: 100px;
+    font-size: small;
+    color: grey;
+    padding: 20px;
+    margin-left: 1px;
+    margin-right:20px;
+    width:100%;
+}
+
+
+/* .form{
+    margin-right: 60px;
+    width: 45%;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-left: 250px;
+} */
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: right;
+  width: 40%;
+  height: 100px; 
+  text-align: left;
+  column-gap:30px;
+}
+
+/* Clear floats after the columns */
+.row{
+  display:grid;
+  flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom:-10px;
+}
+
+.h4,h4{
+    text-align:right;
+    font-size: 20px;
+    color: red;
+    margin-left: 420px;
+}
+
+.h2,h2{
+    font-size: 18px;
+    margin: auto;
+    font-weight: 500;
+    width:50%;
+    inline-size: 250px;
+    margin-left: 20px;
+}
+
+.white{
+    background-color: #ffffff;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding:40px;
+    width:80%;
+  }
+
+  .mainbox{
+    background-color:  rgb(226, 221, 221);
+    /* width:73%; */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    /* height:950px; */
+    margin-bottom: 120px;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+  .boxheader{
+    background-color: #cc0000;
+    color: #ffffff;
+    padding: 25px;
+    text-align:left;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width:100%;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius: 0px;
+
+  }
+
+
+  .subbox{
+    text-align:left;
+    margin: 50px;
+    border-color:rgb(141, 138, 138);
+    width:100%;
+    
+  }
+  .boxfooter{
+    background-color: #cc0000;
+    color: #ffffff;
+    padding: 5px;
+    text-align:center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width:20%;
+    margin-left:350px;
+    margin-top:30px;
+    margin-bottom:10px;
+  }
+  .h3,h3{
+    font-size:25px;
+    font-family:sans-serif;   
+  }
+
+  .h5,h5{
+    font-size:25px;
+    font-family:sans-serif;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+ 
+ .grid-column1{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   margin-right: 5px;
+   grid-template-columns: repeat(3, 1fr);
+   margin-left: 20px;
+   grid-template-rows: 100px;
+  column-gap: 20px;
+ }
+
+ .grid-column2{
+   display: grid;
+   grid-template-columns: auto auto;
+   margin-right: 5px;
+   margin-left: 20px;
+   width:35px;
+   grid-template-rows: 100px;
+  column-gap: 20px;
+}
+ }
+
+ .grid-column3{
+   display: grid;
+   grid-template-columns: auto;
+   margin-right: 5px;
+   width:30%;
+   margin-left:30px;
+   inline-size: 30px;
+   margin-left:23px;
+ }
+
+ .container{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal,black;
+    text-transform: none;
+    display: inline-block;
+    word-wrap: normal;
+    direction: ltr;
+    color:rgb(293, 237, 40);
+  }
+
+ 
+[data-tooltip]{
+  position:relative;
+  cursor:default;
+}
+ [data-tooltip]::after{
+   position:absolute;
+   width:100px;
+   left:calc(50% -70px);
+   content:attr(data-tooltip);
+   text-align:center;
+   box-sizing:border-box;
+   color:#ffffff;
+   background-color:black;
+   padding:5px;
+   border-radius:12px;
+   font-size:0.9rem;
+   font-weight:bold;
+   visibility:hidden;
+   opacity:0;
+   margin-bottom:10px;
+ 
+ }
+
+ [data-tooltip]:hover::after{
+   opacity:1;
+   visibility:visible;
+   
+ }
+
+
+</style>
+</head>
+<body>
+        <div class="text-center">
+                <div class="container">
+                  <div class="whitebox">
+                        <div class="mainbox">
+                                <div class="boxheader">
+                                  <h5>Create New HR ID</h5>
+                                </div>
+                            <div class="subbox">
+<form>
+ <fieldset class="fieldset">
+  <legend>Account Details</legend>
+  <div class="row">
+        <div class="grid-column1">
+                  <h2>*First name<input type="text" name="firstname" value="Enter your First name"></h2>
+                  <h2>*Middle name<input type="text" name="middlename" value="Enter your Middle name"></h2>
+                  <h2>*Last name<input type="text" name="lastname" value="Enter your Last name"></h2>
+        </div>
+             <br><br>
+                <div class="grid-column2">
+                        <h2>*Enter Employee ID<span data-tooltip= "Fill Out!"><i class="material-icons md-18">info<style yellow ></style></i>
+                        <input type="text" name="employeeid" value="Enter the Employee ID Of HR"></h2>
+                        <h2>*Email ID<input type="text" style="width:13cm;" name="emailid" value="Enter your Email ID"></h2>
+                     </div>
+                           <br>
+                           
+                          <div class="grid-column3" style="margin-left:25px;" ,style="margin-inline-end:50px;",style="padding:10px;">
+                    
+                           <!-- <h2>*Enter Username for the HR ID</h2><i class="material-icons md-18" style="float: right;" style="margin-right:5cm";>info</i>
+                              <div class="tooltip">
+                                    <span class="tooltiptext">filled out</span></div>
+                              <input type="text" style="width:8cm;" name="username" value="Enter Username name for the Account"></h2>
+                              </div>  -->
+                              
+                              <h2>*Enter Username for the HR ID<span data-tooltip= "Fill Out!"><i class="material-icons md-18" style="float:left;" style="margin-right:250px;">info</i></span>
+                              <input type="text" style="width:8cm;" name="username" value="Enter Username name for the Account"></h2>
+                         <h4>*Mandatory Fields</h4>
+                </div>
+               </fieldset>
+         </form>
+         <div class="boxfooter">
+                <h3>Create HR ID</h3>
+            </div>
+        </div>
+     </div>
+     </div>
+ </div>
+</div>
+</body>
+</html>
+
